@@ -1,2 +1,0 @@
-For this task we were tasked with creating a *task manager system*.
-The rquirements of the task had an emphasis on using a combination of Lists, Functions and methods of String Handling. When running the programme, the user is greated with a login screen. Once logged in successfully a menu screen is displayed (the admin will have more options in their menu). The user can choose to: add a task, view all tasks and to view their tasks (the admin will have a few more options). 

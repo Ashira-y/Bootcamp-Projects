@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class Customer extends Person {
 
-    public Customer(){
-        super("Customer");
+    public Customer(Scanner input){
+        super("Customer", input);
     }
 
     public Customer (String type, String firstName, String lastName, String phoneNum, String email, String address){

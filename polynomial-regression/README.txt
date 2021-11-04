@@ -1,0 +1,1 @@
+This project uses polynomial regression to display the relationship between the hours spent studying and ones mark on a test.

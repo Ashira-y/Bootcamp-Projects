@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Person {
-    // Using inheritance to create a base class (Person Class) and a derived/sub-class' (Contractor, Customer and Architect Class) to inherit from the base class.
-    // I read up about inheritance from: https://www.mygreatlearning.com/blog/inheritance-in-java/
 
     // Attributes:
     String type;
@@ -12,12 +10,10 @@ public class Person {
     String email;
     String address;
 
-    // Constructor
-    public Person(String type){
+    // Constructors: 
+    public Person(String type, Scanner input){
         this.type = type;
-
-        // Calling the populate method 
-        this.populate();
+        this.populate(input);
     }
     
     public Person (String type, String firstName, String lastName, String phoneNum, String email, String address){
@@ -29,10 +25,10 @@ public class Person {
         this.address = address;
     }
 
-    // Creating getters and setter to update the contractors contact details
+    // Creating getters and setter to update the contact details
     public String getemail(){
         return email;
-    }
+    } 
     public void setemail(String newEmail){
         email = newEmail;
     }
@@ -50,29 +46,31 @@ public class Person {
     }
 
     // Creating a Populate method to fill in the different attributes
-    public void populate(){
-        Scanner input = new Scanner(System.in);
+    public void populate(Scanner input){
 
         System.out.println("\n" + type + " details ");
         System.out.println("\nEnter the " + type + "'s first name:  ");
-        this.firstName = input.next();
+        this.firstName = input.nextLine();
         System.out.println("\nEnter the " + type + "'s last name:  ");
-        this.lastName = input.next();
+        this.lastName = input.nextLine();
         System.out.println("\nEnter the " + type + "'s phone number: ");
-        this.phoneNum = input.next();
+        this.phoneNum = input.nextLine();
         System.out.println("\nEnter the "+ type + "'s email address: ");
-        this.email = input.next();
+        this.email = input.nextLine();
         System.out.println("\nEnter the " + type + "'s address: ");
-        this.address = input.next();
+        this.address = input.nextLine();
 
-        // If I close the scanner the program breaks. Not too sure why. Please can you tell me why it does this.
-        //input.close();
-        }
+    }
 
-    // toString method
+    // This method formats the different elements in the constructor into a string which can be easily read once printed.
     public String toString(){
-        String createdString = "\n" + type + " details:" + "\nName: " + firstName + " " + lastName + "\nPhone Number: " + phoneNum + "\nEmail Adress: " + email + "\nAddress: " + address;
+        String createdString = type + " Name: "  + firstName + " " + lastName + "\n" + type + " Phone Number: " + phoneNum + "\n" + type + " Email Adress: " + email + "\n" + type + " Address: " + address;
         return createdString;
     }
-    
+
+    // This method formats the different elements in the constructor into a string which can be easily written to a file
+    public String toFile(){
+        String createdString = firstName + " " + lastName + "," + phoneNum + "," + email + "," + address;
+        return createdString;
+    }
 }
