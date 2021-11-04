@@ -1,5 +1,5 @@
 For this task we were tasked with creating a task-management system for a construction company called 'Poised'. 
-The projects works with MySQLin order to create a management system. Projects are either written or updated on the database.
+The projects uses MySQL. Projects are either written, updated or removed from the database.
 
 A user is displayed a menu where they can either:
 -	Display all projects
@@ -8,7 +8,7 @@ A user is displayed a menu where they can either:
 -	Display a list of incomplete projects
 -	Display a list of incomplete and overdue projects
 -	Display all contractors
-- 	Display all architects
+- Display all architects
 -	Display all customers
 -	Display all invoices	
 
