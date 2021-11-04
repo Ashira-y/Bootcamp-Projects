@@ -1,1 +1,1 @@
-Book Manager is book tracking application which uses MySQL. A menu is displayed to user. The user can either choose to add a new book to the database, update an existing book in the database, remove a book from the database and display all books in the database.
+Book Manager is book tracking application which uses MySQL. A menu is displayed to the user. The user can either choose to add a new book to the database, update an existing book in the database, remove a book from the database or display all books in the database.
